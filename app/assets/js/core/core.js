@@ -1,10 +1,12 @@
-import {utils as _utils} from "./utils";
+import {app} from "./../app";
 import {dom as _dom} from "./dom";
+import {utils as _utils} from "./utils";
 
-export let core = (function(){
-  const utils = _utils;
+app.core = (function(){
   const dom = _dom;
-  const data = [];
+  const utils = _utils;
+
+  const data = {};
   /**
    * define a module
    * @param  {string} id modulename
@@ -16,6 +18,7 @@ export let core = (function(){
     }else{
       throwError(1, 'Module' + id + 'registration failed. One or more args are of an incorrect type');
     }
+    console.log('data',data);
   };
 
   /**

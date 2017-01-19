@@ -1,6 +1,6 @@
-import { core } from "./../core/core";
+import { app } from "./../app";
 
-const facade = (function(){
+app.f = (function(){
   return {
 
   };

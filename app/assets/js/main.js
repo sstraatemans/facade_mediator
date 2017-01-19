@@ -1,8 +1,4 @@
+import {app} from "./app";
 import {core} from "./core/core";
-
-
-
-const CI = CI || {};
-CI.core = core;
-
-console.log(CI);
+import {facade} from "./facade/facade";
+import {saveQuery} from "./modules/saveQuery/saveQuery";
