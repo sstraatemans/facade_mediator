@@ -1,4 +1,6 @@
-export let utils = (function() {
+import {app} from "./../app";
+
+app.utils = (function() {
 
   /**
    * check if the objecgt is a certain type
