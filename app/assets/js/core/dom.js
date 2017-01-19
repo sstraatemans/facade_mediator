@@ -1,5 +1,4 @@
 import $ from "jquery";
-import {core} from "./core";
 
 export let dom = (function() {
   let _elements = [];
