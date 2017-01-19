@@ -1,6 +1,7 @@
 import $ from "jquery";
+import {app} from "./../app";
 
-export let dom = (function() {
+app.dom = (function() {
   let _elements = [];
 
   let query = (selector) => {

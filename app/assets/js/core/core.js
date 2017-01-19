@@ -2,7 +2,6 @@ import {app} from "./../app";
 
 app.core = (function(){
   const data = {};
-  console.log(app);
   /**
    * define a module
    * @param  {string} id modulename
@@ -11,8 +10,7 @@ app.core = (function(){
   let define = (id, construct) => {
     if(app.utils.typeEqual(id, 'string') && app.utils.typeEqual(constructor, 'function')){
         //test if you can init the module
-        let temp = construct(app.f.define(this, id));
-        console.log('temp',temp);
+        let temp = construct(app.f.define(app.f, id));
         if(temp.init && app.utils.typeEqual(temp.init, 'function')
           && temp.destroy && app.utils.typeEqual(temp.destroy, 'function')){
             temp = null;
@@ -29,9 +27,9 @@ app.core = (function(){
    * start 1 module by id
    * @param  {string} id id of the module
    */
-  let start = function(id) {
+  let start = (id) => {
     var module = data[id];
-    module.instance = module.define(app.f.define(this,id));
+    module.instance = module.define(app.f.define(app.f,id));
     module.instance.init();
   };
 
