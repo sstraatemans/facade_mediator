@@ -1,7 +1,16 @@
 import { app } from "./../app";
 
 app.f = (function(){
-  return {
 
+  let define = ( core, module ) => {
+    var core = app.core;
+
+    return {
+
+    };
+  };
+
+  return {
+    define
   };
 }());
