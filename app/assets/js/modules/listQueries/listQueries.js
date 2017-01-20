@@ -1,11 +1,9 @@
 import {app} from "./../../app";
 import "./listQueries.scss";
 
-export const listQueries = app.core.define('listQueries', function(f){
+export const listQueries = function(f) {
     let init = () => {
-      console.log('f',f);
-      console.log('app',app);
-      console.log('init');
+      console.log('init start');
     };
 
     let destroy = () => {
@@ -16,4 +14,6 @@ export const listQueries = app.core.define('listQueries', function(f){
       init,
       destroy
     };
-});
+};
+
+app.core.define('listQueries', listQueries);

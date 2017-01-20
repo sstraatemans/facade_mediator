@@ -34,8 +34,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [
-          path.resolve('app/assets/js'),
-          path.resolve('node_modules/preact-compat/src')
+          path.resolve('app/assets/js')
         ]
       },
       {
