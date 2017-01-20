@@ -6,7 +6,7 @@ app.f = (function(){
     var core = core;
 
     return {
-      core
+
     };
   };
 

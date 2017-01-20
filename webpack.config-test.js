@@ -1,5 +1,4 @@
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
 
 module.exports = {
   context: __dirname,
@@ -11,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.scss']
+    extensions: ['.js']
   },
   stats: {
     colors: true,
@@ -37,15 +36,7 @@ module.exports = {
           path.resolve('app/assets/js'),
           path.resolve('node_modules/preact-compat/src')
         ]
-      },
-      {
-        test: /\.scss$/,
-        loader:
-          ExtractTextPlugin.extract('css!postcss!sass'),
       }
     ]
-  },
-  plugins: [
-      new ExtractTextPlugin({ filename: './css/style.css', disable: false, allChunks: true })
-  ]
+  }
 };

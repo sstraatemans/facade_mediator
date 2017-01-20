@@ -1,4 +1,5 @@
 import {app} from "./../../app";
+import "./listQueries.scss";
 
 export const listQueries = app.core.define('listQueries', function(f){
     let init = () => {
