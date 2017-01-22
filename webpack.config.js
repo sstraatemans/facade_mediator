@@ -13,6 +13,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.scss']
   },
+  externals: {
+        // Use external version of jQuery
+        "jquery": "jQuery"
+  },
   stats: {
     colors: true,
     reasons: true,
@@ -23,6 +27,7 @@ module.exports = {
     reload: true
   },
   module: {
+    noParse: [ "jQuery" ],
     rules: [
       {
         enforce: "pre",
@@ -35,7 +40,8 @@ module.exports = {
         loader: 'babel-loader',
         include: [
           path.resolve('app/assets/js')
-        ]
+        ],
+        exclude: '/node_modules/jquery'
       },
       {
         test: /\.scss$/,
