@@ -1,7 +1,8 @@
 import { app } from "./app";
-import {utils} from "./core/utils";
-import {dom} from "./core/dom";
-import {core} from "./core/core";
-import {facade} from "./facade/facade";
-import {saveQuery} from "./modules/saveQuery/saveQuery";
+import "./core/core";
+import "./core/utils";
+import "./core/dom";
+import "./core/events";
+import "./facade/facade";
 import {listQueries} from "./modules/listQueries/listQueries";
+import {saveQuery} from "./modules/saveQuery/saveQuery";

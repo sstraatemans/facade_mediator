@@ -29,7 +29,7 @@ app.core = (function(){
    */
   let start = (id) => {
     var module = data[id];
-    module.instance = module.define(app.f.define(app.f,id));
+    module.instance = module.define(app.f.define(app.core,id));
     module.instance.init();
   };
 
