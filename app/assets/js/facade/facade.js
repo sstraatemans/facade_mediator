@@ -2,9 +2,11 @@ import { app } from "./../app";
 
 app.f = (function(){
   let define = ( core, module ) => {
-    let {events={}} = core;
+    let {events={},
+        dom={}} = core;
     return {
-      events
+      events,
+      dom
     };
   };
 

@@ -31,6 +31,16 @@ app.core = (function(){
     var module = data[id];
     module.instance = module.define(app.f.define(app.core,id));
     module.instance.init();
+
+
+    if(module.instance.getElements && app.utils.typeEqual(module.instance.getElements, 'function')){
+      if(module.instance.getElements().length>0){
+        for (var elm of module.instance.getElements()) {
+          module.instance.render(elm);
+        }
+      }
+    }
+
   };
 
   /**

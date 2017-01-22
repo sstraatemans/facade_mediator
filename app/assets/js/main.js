@@ -1,6 +1,6 @@
 import { app } from "./app";
-import "./core/core";
 import "./core/utils";
+import "./core/core";
 import "./core/dom";
 import "./core/events";
 import "./facade/facade";
